@@ -93,3 +93,21 @@ def add_employee():
     clearAll()
     dispalyAll()
 
+def update_employee():
+    if txtName.get() == "" or txtAge.get() == "" or txtDob.get() == "" or txtEmail.get() == "" or comboGender.get() == "" or txtContact.get() == "" or txtAddress.get(
+            1.0, END) == "":
+        messagebox.showerror("Erorr in Input", "Please Fill All the Details")
+        return
+    db.update(row[0],txtName.get(), txtAge.get(), txtDob.get(), txtEmail.get(), comboGender.get(), txtContact.get(),
+              txtAddress.get(
+                  1.0, END))
+    messagebox.showinfo("Success", "Record Update")
+    clearAll()
+    dispalyAll()
+
+
+def delete_employee():
+    db.remove(row[0])
+    clearAll()
+    dispalyAll()
+
