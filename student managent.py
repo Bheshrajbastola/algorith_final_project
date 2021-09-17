@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from db import Database
+from tkinter import messagebox
 
 db = Database("Student.db")
 root = Tk()
@@ -59,3 +60,36 @@ lblAddress.grid(row=4, column=0, padx=10, pady=10, sticky="w")
 
 txtAddress = Text(entries_frame, width=85, height=5, font=("Calibri", 16))
 txtAddress.grid(row=5, column=0, columnspan=4, padx=10, sticky="w")
+
+def getData(event):
+    selected_row = tv.focus()
+    data = tv.item(selected_row)
+    global row
+    row = data["values"]
+    #print(row)
+    name.set(row[1])
+    age.set(row[2])
+    dob.set(row[3])
+    email.set(row[4])
+    gender.set(row[5])
+    contact.set(row[6])
+    txtAddress.delete(1.0, END)
+    txtAddress.insert(END, row[7])
+
+def dispalyAll():
+    tv.delete(*tv.get_children())
+    for row in db.fetch():
+        tv.insert("", END, values=row)
+
+
+def add_employee():
+    if txtName.get() == "" or txtAge.get() == "" or txtDob.get() == "" or txtEmail.get() == "" or comboGender.get() == "" or txtContact.get() == "" or txtAddress.get(
+            1.0, END) == "":
+        messagebox.showerror("Erorr in Input", "Please Fill All the Details")
+        return
+    db.insert(txtName.get(),txtAge.get(), txtDob.get() , txtEmail.get() ,comboGender.get(), txtContact.get(), txtAddress.get(
+            1.0, END))
+    messagebox.showinfo("Success", "Record Inserted")
+    clearAll()
+    dispalyAll()
+
