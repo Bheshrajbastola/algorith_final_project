@@ -18,7 +18,8 @@ gender = StringVar()
 email = StringVar()
 contact = StringVar()
 
-# Entries Frame
+#################### Main Body #######################
+
 entries_frame = Frame(root, bg="green")
 entries_frame.pack(side=TOP, fill=X)
 title = Label(entries_frame, text="Student Management System", font=("Calibri", 18, "bold"), bg="green", fg="white")
@@ -61,6 +62,8 @@ lblAddress.grid(row=4, column=0, padx=10, pady=10, sticky="w")
 txtAddress = Text(entries_frame, width=85, height=5, font=("Calibri", 16))
 txtAddress.grid(row=5, column=0, columnspan=4, padx=10, sticky="w")
 
+
+########## FEtching Data######################33
 def getData(event):
     selected_row = tv.focus()
     data = tv.item(selected_row)
@@ -76,14 +79,18 @@ def getData(event):
     txtAddress.delete(1.0, END)
     txtAddress.insert(END, row[7])
 
+################ Function to display the recorded data #######################3w
 def dispalyAll():
     tv.delete(*tv.get_children())
     for row in db.fetch():
         tv.insert("", END, values=row)
 
 
+########################function to add student###################3333
+
 def add_student():
-    if txtName.get() == "" or txtAge.get() == "" or txtDob.get() == "" or txtEmail.get() == "" or comboGender.get() == "" or txtContact.get() == "" or txtAddress.get(
+    if txtName.get() == "" or txtAge.get() == "" or txtDob.get() == "" \
+            or txtEmail.get() == "" or comboGender.get() == "" or txtContact.get() == "" or txtAddress.get(
             1.0, END) == "":
         messagebox.showerror("Erorr in Input", "Please Fill All the Details")
         return
@@ -92,6 +99,9 @@ def add_student():
     messagebox.showinfo("Success", "Record Inserted")
     clearAll()
     dispalyAll()
+
+
+####################Function to upadte the student data######################
 
 def update_student():
     if txtName.get() == "" or txtAge.get() == "" or txtDob.get() == "" or txtEmail.get() == "" or comboGender.get() == "" or txtContact.get() == "" or txtAddress.get(
