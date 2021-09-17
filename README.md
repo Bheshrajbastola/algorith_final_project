@@ -23,6 +23,10 @@
     SQlite3 : To store the recorde given by the user.
     Youtube : To published the video related or explaning about the project.
     
+   # To run project
+      First download the python iin system and install it. Then install pycharm and also this projetc file.
+      The main file is in the student managent. so run it in the pycharm it will give the result.
+    
     
 # Output
    # Add ![added](https://user-images.githubusercontent.com/85820273/133830823-e5a40b83-063c-4e43-ac04-d7e8697d0ba9.jpg)
