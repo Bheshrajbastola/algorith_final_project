@@ -13,4 +13,11 @@
   5. The Sqlite database hold the Enter data permentatly until the user delete it .
   
   
-  
+  # Tools Used;
+    Python : To write the code.
+    Pycharm : To execute or to run the code written in the python.
+    Tkinter : To build the GUI for the proper interface.
+    SQlite3 : To store the recorde given by the user.
+    Youtube : To published the video related or explaning about the project.
+    
+    
