@@ -5,6 +5,9 @@
   This project helps to keep the record of the student of any institution.
   Any small institution , primary school can used this device to record the data.
   
+  # Outlook ![Screenshot 2021-09-17 225011](https://user-images.githubusercontent.com/85820273/133827821-5c0ba912-61ca-4d87-aa90-ce11e48aaa63.jpg)
+
+  
   # Feature
   1. Add the record of the student.
   2. Update the record of the existing student.
