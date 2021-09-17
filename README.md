@@ -26,4 +26,4 @@
     
 # Output
    # Add ![added](https://user-images.githubusercontent.com/85820273/133830823-e5a40b83-063c-4e43-ac04-d7e8697d0ba9.jpg)
-       # Update ![updated](https://user-images.githubusercontent.com/85820273/133830911-4e2dde7e-1cca-4cd4-abe1-aae6b74a252e.jpg)
+   # Update ![updated](https://user-images.githubusercontent.com/85820273/133830911-4e2dde7e-1cca-4cd4-abe1-aae6b74a252e.jpg)
