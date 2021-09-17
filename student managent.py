@@ -7,7 +7,7 @@ db = Database("Student.db")
 root = Tk()
 root.title("Student  Management System")
 root.iconbitmap('C:/Users/swika/Desktop/tution.ico')
-root.geometry("1920x1080+0+0")
+root.geometry("4000x400")
 root.config(bg="#2c3e50")
 root.state("zoomed")
 
