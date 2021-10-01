@@ -4,6 +4,7 @@ class Database:
     def __init__(self, db):
         self.con = sqlite3.connect(db)
         self.cur = self.con.cursor()
+############################## Database Query #####################
         sql = """
         CREATE TABLE IF NOT EXISTS student(
             id Integer Primary Key,
@@ -19,25 +20,25 @@ class Database:
         self.cur.execute(sql)
         self.con.commit()
 
-    # Insert Function
+#################### Insert Function################################
     def insert(self, name, age, dob, email, gender, contact, address):
         self.cur.execute("insert into student values (NULL,?,?,?,?,?,?,?)",
                          (name, age, dob, email, gender, contact, address))
         self.con.commit()
 
-    # Fetch All Data from DB
+####################### Fetch All Data from DB###########################
     def fetch(self):
         self.cur.execute("SELECT * from student")
         rows = self.cur.fetchall()
         # print(rows)
         return rows
 
-    # Delete a Record in DB
+####################### Delete a Record in DB#############################
     def remove(self, id):
         self.cur.execute("delete from student where id=?", (id,))
         self.con.commit()
 
-    # Update a Record in DB
+####################### Update a Record in DB################################
     def update(self, id, name, age, dob, email, gender, contact, address):
         self.cur.execute(
             "update student set name=?, age=?, doj=?, email=?, gender=?, contact=?, address=? where id=?",
