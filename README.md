@@ -4,6 +4,7 @@
   This is the simple python GUI project build using the tkinter and Sqlite3 for the database. 
   This project helps to keep the record of the student of any institution.
   Any small institution , primary school can used this device to record the data.
+           (Main file in student managent and databse file in the db.py.)
   
   # Outlook ![Screenshot 2021-09-17 225011](https://user-images.githubusercontent.com/85820273/133827821-5c0ba912-61ca-4d87-aa90-ce11e48aaa63.jpg)
 
